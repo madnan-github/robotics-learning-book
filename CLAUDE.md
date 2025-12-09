@@ -208,3 +208,10 @@ Wait for consent; never auto-create ADRs. Group related decisions (stacks, authe
 
 ## Code Standards
 See `.specify/memory/constitution.md` for code quality, testing, performance, security, and architecture principles.
+
+## Active Technologies
+- Python 3.12+ (as specified in constitution and feature spec) + rclpy (ROS 2 Python client library), FastAPI (for backend integration), Docusaurus 3.x (for frontend documentation), pytest, mypy (001-ros2-module1)
+- Files only (MDX content files, no database needed for basic module) (001-ros2-module1)
+
+## Recent Changes
+- 001-ros2-module1: Added Python 3.12+ (as specified in constitution and feature spec) + rclpy (ROS 2 Python client library), FastAPI (for backend integration), Docusaurus 3.x (for frontend documentation), pytest, mypy

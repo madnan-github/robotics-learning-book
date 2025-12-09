@@ -1,55 +1,95 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+SYNC IMPACT REPORT
+Version change: N/A (initial version) → 1.0.0
+Added sections: Core Principles (6 principles), Technical Architecture Requirements, Development Standards & Quality Metrics, Governance
+Removed sections: None (this is the initial constitution)
+Templates requiring updates:
+  - .specify/templates/plan-template.md: ✅ Constitution Check section should reference new principles
+  - .specify/templates/spec-template.md: ⚠ pending (may need updates to align functional requirements with new principles)
+  - .specify/templates/tasks-template.md: ⚠ pending (may need updates for test coverage requirements)
+  - .specify/templates/commands/*.md: ✅ No changes needed as no command templates exist
+  - README.md: ⚠ pending (if exists, should reference new constitution principles)
+Follow-up TODOs: None
+-->
+# Physical AI & Humanoid Robotics Learning Platform Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### Spec-First, AI-Augmented
+No code or content without validated specifications
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### Pedagogy-Driven
+Content structure must optimize learning outcomes
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### Production-Ready
+Hackathon speed cannot compromise system stability
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### Open by Design
+Architecture must support community contributions
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### Type Safety & Validation
+All Python code requires type hints, all functions require Google-style docstrings, and mypy compliance is mandatory
 
-### [PRINCIPLE_6_NAME]
+### Test Coverage Requirement
+Backend code must maintain ≥85% test coverage using pytest
 
+## Technical Architecture Requirements
 
-[PRINCIPLE__DESCRIPTION]
+Stack Requirements:
+- Frontend: Docusaurus 3.x (React 18+, TypeScript 5+)
+- Backend: FastAPI (Python 3.12+)
+- Package Manager: uv (strictly enforced)
+- Database: Neon PostgreSQL (operational), Qdrant (vector)
+- Authentication: Better-Auth
+- Orchestration: Claude Code CLI + Spec-Kit Plus
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+Infrastructure Rules:
+- All Python dependencies pinned via uv.lock
+- Environment variables managed through .env.production only
+- Vector embeddings: all-MiniLM-L6-v2 (default), configurable
+- API versioning: /v1/* prefix mandatory
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+## Development Standards & Quality Metrics
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+Python Code Standards:
+- Type hints required for all functions
+- Google-style docstrings required for all functions
+- mypy compliance mandatory
+- pytest with 90%+ coverage required
+- src/ layout with clear separation
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+Quality Metrics (Minimum Viable):
+- Backend test coverage: ≥85%
+- Page load time: <3 seconds
+- RAG response accuracy: >90% on test queries
+- Translation quality: >70% human evaluator score
+- Mobile responsiveness: 100% chapters
+
+Database Schemas:
+- User profiles with learning style, language preference, proficiency level, and personalized pathways
+- Learning analytics tracking sessions, chapter completion, time spent, and assessment scores
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+Workflow Rules:
+- Atomic Tasks: All work decomposed to <2 hour units
+- Validation Gates: Code must pass unit tests + integration tests, content requires curriculum alignment check + peer review
+- Commit Standards: Conventional commits (feat:, fix:, docs:, content:), no direct pushes to main - PRs only
+- Checkpoints: Every 4 hours - demonstrable progress required
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+Decision Authority:
+- Technical Decisions: Lead Architect (specified in ADRs)
+- Content Decisions: Curriculum Committee (3 members minimum)
+- Merge Authority: Two approved reviews required
+
+Change Management:
+- Constitution amendments: Unanimous team vote required
+- Syllabus changes: Curriculum Committee + one industry expert
+- Breaking API changes: 48-hour deprecation notice
+
+Risk Mitigation:
+- Vector DB failure: SQLite fallback with TF-IDF
+- Auth service outage: Read-only mode with cached content
+- Translation API limits: Queue system with exponential backoff
+
+**Version**: 1.0.0 | **Ratified**: 2025-12-09 | **Last Amended**: 2025-12-09
