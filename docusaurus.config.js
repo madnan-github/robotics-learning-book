@@ -58,19 +58,24 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/robotics-social-card.jpg',
       navbar: {
         title: 'Robotic Learning Book',
         logo: {
           alt: 'Robotic Learning Book Logo',
-          src: 'img/logo.svg',
+          src: 'img/robotics-logo.svg',
         },
         items: [
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Modules',
+          },
+          {
+            to: '/docs/',
+            label: 'Home',
+            position: 'left',
           },
           {
             href: 'https://github.com/madnan-github/robotics-learning-book',
@@ -83,11 +88,40 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Learning Modules',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/category/getting-started',
+                label: 'Module 1: ROS 2 Fundamentals',
+                to: '/docs/module1/intro',
+              },
+              {
+                label: 'Module 2: Digital Twin (Gazebo & Unity)',
+                to: '/docs/module2/intro',
+              },
+              {
+                label: 'Module 3: AI-Robot Brain (Isaac)',
+                to: '/docs/module3/intro',
+              },
+              {
+                label: 'Module 4: Vision-Language-Action',
+                to: '/docs/module4/intro',
+              },
+            ],
+          },
+          {
+            title: 'Resources',
+            items: [
+              {
+                label: 'ROS 2 Documentation',
+                href: 'https://docs.ros.org/',
+              },
+              {
+                label: 'NVIDIA Isaac',
+                href: 'https://developer.nvidia.com/isaac',
+              },
+              {
+                label: 'Gazebo Simulation',
+                href: 'https://gazebosim.org/',
               },
             ],
           },
@@ -95,21 +129,16 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Robotics Stack Exchange',
+                href: 'https://robotics.stackexchange.com/',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'ROS Discourse',
+                href: 'https://discourse.ros.org/',
               },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/madnan-github/robotics-learning-book',
               },
             ],
           },
