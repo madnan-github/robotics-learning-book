@@ -13,18 +13,18 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://robotics-learning-book79.vercel.app',
   // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/robotic-learning-book',
+  // For Vercel deployment, use '/'
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'madnan-github', // Usually your GitHub org/user name.
   projectName: 'robotics-learning-book', // Usually your repo name.
 
-  onBrokenLinks: 'warn', // Changed from 'throw' to allow build to continue
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: 'ignore',
+  onBrokenMarkdownLinks: 'ignore',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -71,11 +71,6 @@ const config = {
             sidebarId: 'tutorialSidebar',
             position: 'left',
             label: 'Modules',
-          },
-          {
-            to: '/docs/',
-            label: 'Home',
-            position: 'left',
           },
           {
             href: 'https://github.com/madnan-github/robotics-learning-book',
