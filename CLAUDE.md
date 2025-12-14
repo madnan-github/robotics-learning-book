@@ -212,6 +212,8 @@ See `.specify/memory/constitution.md` for code quality, testing, performance, se
 ## Active Technologies
 - Python 3.12+ (as specified in constitution and feature spec) + rclpy (ROS 2 Python client library), FastAPI (for backend integration), Docusaurus 3.x (for frontend documentation), pytest, mypy (001-ros2-module1)
 - Files only (MDX content files, no database needed for basic module) (001-ros2-module1)
+- Python 3.12+ (as specified in constitution) + Cohere client library, Qdrant client library, BeautifulSoup4, Requests, uv package manager (001-embedding-pipeline)
+- Qdrant vector database (for embeddings), N/A for primary storage (001-embedding-pipeline)
 
 ## Recent Changes
 - 001-ros2-module1: Added Python 3.12+ (as specified in constitution and feature spec) + rclpy (ROS 2 Python client library), FastAPI (for backend integration), Docusaurus 3.x (for frontend documentation), pytest, mypy
