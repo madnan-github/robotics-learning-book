@@ -12,7 +12,7 @@ export default function GetStartedButton() {
             <Link
               className={clsx('button button--secondary button--lg', styles.getStartedButton)}
               to="/docs/module1/intro">
-              Getting Start
+              Getting Start!
             </Link>
           </div>
         </div>
